@@ -1,58 +1,147 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>web-portfolio</title>
-  </head>
-  <body>
-    
-  <nav class="navbar">
-  <div class="logo">
-    <a href="#">JNDR</a>
-  </div>
+ <body>
 
-  <div class="menu">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">JNDR</a>
+      </div>
+
+      <div class="menu">
+      <ul>
+
+     
+       <li><a href="#hero-section">Home</a></li> 
+        <li><a href="#skill-section">Skills</a> </li>
+       <li> <a href="#project-section">Projects</a> </li>
+       <li><a href="#contact-section">Contact</a> </li>
+
+       </ul>
+      </div>
+    </nav>
+
+    <!-- Hero / Intro Section -->
+    <section id="hero-section" class="page">
+      <div class="intro-container">
+        <h1>Hi. I am JNDR</h1>
+        <p>
+          I am an aspiring software engineer proficient in software <br>
+          and web development. My work includes creating user-friendly <br>
+          software and website interfaces, along with designing<br>
+          efficient database systems and backend development. 
+        </p>
+
+        <div class="button-container">
+          <a href="#" class="download-btn">Download CV</a>
+        </div>
+
+        <div class="social-links">
+          <span>Social Links:</span>
+          <div class="icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img src="/src/assets/profile-pic.png" alt="Profile Picture" />
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skill-section" class="page">
+      <h1>Skill sets</h1>
+      <h2>List of programming languages I have used in my career journey</h2>
+
+      <div class="skill-card-1">
+        <img src="/src/assets/html5.png" alt="C# Logo" />
+        <p>C#</p>
+      </div>
+
+      <div class="skill-card-2">
+        <img src="/src/assets/html5.png" alt="Database Logo" />
+        <p>Database</p>
+      </div>
+
+      <div class="skill-card-3">
+        <img src="/src/assets/html5.png" alt="Web Dev Logo" />
+        <p>Web Dev</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project-section" class="page">
+      <h1>Projects</h1>
+      <h2>List of projects I have worked on</h2>
+
+      <div class="project-card-1">
+        <img src="/src/assets/project-1.png" alt="Project 1" />
+        <p>Project 1</p>
+        <p>Description</p>
+      </div>
+
+      <div class="project-card-2">
+        <img src="/src/assets/project-2.png" alt="Project 2" />
+        <p>Project 2</p>
+        <p>Description</p>
+      </div>
+
+      <div class="project-card-3">
+        <img src="/src/assets/project-3.png" alt="Project 3" />
+        <p>Project 3</p>
+        <p>Description</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="page">
+      <h1>Let's connect</h1>
+      <h2>Feel free to reach out to me via any of the platforms below</h2>
+
+      <div class="contact-card-1">
+        <img src="/src/assets/email.png" alt="Email Logo" />
+        <p>jndr.jndr@gmail.com</p>
+        <p>Email</p>
+      </div>
+
+      <div class="contact-card-2">
+        <img src="/src/assets/phone.png" alt="Phone Logo" />
+        <p>+91 9876543210</p>
+        <p>Phone</p>
+      </div> 
+
+      <div class="contact-card-3">
+        <img src="/src/assets/linkedin.png" alt="LinkedIn Logo" />
+        <p>jndr-jndr</p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Contact Form</h2>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
 
 
-    <div class="intro-container">
-  <h1>Hi. I am JNDR</h1>
-  <p>
-    I am a aspiring software engineer proficient in software
-    and Web development. My work includes creating user-
-    friendly software and website interfaces, along with
-    designing efficient database systems and backend
-    development.
-  </p>
-  
-  <a href="#" class="download-btn">Download CV</a>
-  
-  <div class="social-links">
-    <span>Social Links:</span>
-    <div class="icons">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
-</div>
+    <section id="footer-section" class="page">
+      <div class="footer-container">
+        <p>Copyright © 2025 JNDR</p>
+      </div>
+    </section>
 
-
-
-
-
-
-
-
-
-    
+    <!-- Main JS -->
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
-</html>
