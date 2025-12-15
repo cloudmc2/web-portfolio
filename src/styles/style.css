@@ -1,69 +1,66 @@
-
-html{
+/* Enable smooth scrolling when using anchor links */
+html {
   scroll-behavior: smooth;
-  
 }
 
-body{
-
-  background-color: #050A30 ;
-  margin: 0;
-  font: Arial, sans-serif;
-  color: azure;
-  
+/* Global page styling */
+body {
+  background-color: #050A30;      /* Dark background theme */
+  margin: 0;                      /* Remove default browser margin */
+  font-family: Arial, sans-serif; /* Set default font */
+  color: azure;                   /* Default text color */
 }
 
-.page{
-  min-height: 100vh;          /* Full screen */
-  display: flex;              /* Center content */
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
+/* Generic full-screen section styling */
+.page {
+  min-height: 100vh;              /* Make each section at least full viewport height */
+  display: flex;                  /* Use flexbox for alignment */
+  align-items: center;            /* Vertically center content */
+  justify-content: center;        /* Horizontally center content */
+  padding: 60px 20px;             /* Inner spacing for content */
 }
 
-nav{
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+/* Navigation bar styling */
+nav {
+  display: flex;                  /* Horizontal layout */
+  justify-content: space-evenly;  /* Even spacing between items */
+  align-items: center;            /* Vertically center items */
   width: 100%;
   padding: 20px;
-  background-color: #050A30;
-  color: azure;
-  /* border: 0.5px solid gray; */
-  background: transparent;
-  backdrop-filter: blur(10px); /* Adjust blur value as needed */
-  background-color: rgba(255, 255, 255, 0.08);
-  position: fixed;
-  top:0;
-  z-index: 100;
 
-  
+  background: transparent;        /* Transparent background */
+  backdrop-filter: blur(10px);    /* Frosted glass blur effect */
+  background-color: rgba(255, 255, 255, 0.08);
+
+  position: fixed;                /* Keep navbar visible on scroll */
+  top: 0;
+  z-index: 100;                   /* Stay above all content */
 }
- 
-nav ul{
-  list-style-type: none;
+
+/* Remove default list styling and align nav items */
+nav ul {
+  list-style-type: none;          /* Remove bullets */
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex;                  /* Horizontal list */
   justify-content: center;
-
 }
 
-nav  li a{
+/* Navigation links */
+nav li a {
   display: block;
   color: azure;
-  text-decoration: none;
-  position: relative;
-  margin: 0px;
+  text-decoration: none;          /* Remove underline */
+  position: relative;             /* Required for hover underline */
   padding: 10px 20px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.3s;         /* Smooth hover transition */
 }
 
-nav li a::before{
+/* Underline animation (initially hidden) */
+nav li a::before {
   content: "";
   position: absolute;
-  width: 0;
+  width: 0;                       /* Start hidden */
   height: 2px;
   background-color: #16eaf1;
   bottom: 0;
@@ -71,20 +68,72 @@ nav li a::before{
   transition: width 0.4s;
 }
 
-nav li a:hover{
-  color:#16eaf1
+/* Link hover color */
+nav li a:hover {
+  color: #16eaf1;
 }
 
-nav li a:hover::before{
+/* Reveal underline on hover */
+nav li a:hover::before {
   width: 100%;
-  
 }
 
-#hero-section{
-background-image: url("/images/hero-section-bg.png");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-position: center center;
+/* Theme switch container */
+.switch {
+  margin-top: 2px;
+  font-size: 17px;
+  position: relative;
+  width: 3.5em;
+  height: 2em;
+}
 
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  --background: #28096b;           /* Default slider background */
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+/* Slider knob */
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  background: var(--background);
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  transition: 0.5s;
+}
+
+/* Slider active state */
+input:checked + .slider {
+  background-color: #522ba7;
+}
+
+/* Move knob when active */
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/* Hero section background image */
+#hero-section {
+  background-image: url("/images/hero-section-bg.png"); /* Hero background image */
+  background-size: cover;       /* Fill entire section */
+  background-position: center;  /* Center image */
+  background-repeat: no-repeat; /* Prevent tiling */
 }
