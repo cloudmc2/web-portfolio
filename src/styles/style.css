@@ -42,6 +42,7 @@ nav ul {
   list-style-type: none;          /* Remove bullets */
   margin: 0;
   padding: 0;
+  gap: 10px;
   display: flex;                  /* Horizontal list */
   justify-content: center;
 }
@@ -81,6 +82,7 @@ nav li a:hover::before {
 /* Theme switch container */
 .switch {
   margin-top: 2px;
+  margin-left: auto;
   font-size: 17px;
   position: relative;
   width: 3.5em;
@@ -137,3 +139,112 @@ input:checked + .slider:before {
   background-position: center;  /* Center image */
   background-repeat: no-repeat; /* Prevent tiling */
 }
+
+.intro-container{
+  display: flex;
+  flex-direction: column;
+  transform: translate(-40%, -10%);
+ 
+}
+
+.intro-container h1{
+  font-size: 3em;
+  margin: 0;
+  background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-container p{
+  font-size: 1.2em;
+  color: azure;
+  text-justify: auto;
+}
+
+ .button-container a{
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 200px;
+  height: 45px;
+  transition: 0.3s;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+ .button-container a:hover{
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+.social-links{
+  display: flex;
+  gap: 20px;
+}
+.social-links span{
+  color: azure;
+  font-size: 1.1em;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.icons{
+  display: flex;
+  gap: 15px;
+  transform: translate(-65%, 70%);
+}
+
+.social-links a{
+  position: relative;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+.social-links a img{
+    border-radius: 50%;
+}
+
+.social-links a img:hover{
+  transform: scale(1.1);
+   box-shadow: 
+    0 0 10px #ff00ff, /* Inner glow */
+    0 0 30px #ff00ff, /* Middle glow */
+    0 0 50px #ff00ff; /* Outer glow */
+
+    
+   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image-container img{
+  border-radius: 50%;
+  transform: translate(50%, -45%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.profile-image-container img:hover{
+  transform: scale(1.05) translate(50%, -45%);
+  box-shadow: 
+    0 0 10px #00ffff, /* Inner glow */
+    0 0 30px #00ffff, /* Middle glow */
+    0 0 50px #00ffff; /* Outer glow */
+    
+   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+
+
+
