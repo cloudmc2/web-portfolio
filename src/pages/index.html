@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Personal Portfolio</title>
  </head> 
  <body>
 
@@ -18,9 +18,11 @@
 
      
        <li><a href="#hero-section">Home</a></li> 
+        <li><a href="#about-section">About Me</a> </li>
         <li><a href="#skill-section">Skills</a> </li>
        <li> <a href="#project-section">Projects</a> </li>
        <li><a href="#contact-section">Contact</a> </li>
+
 
       <label class="switch">
       <input type="checkbox">
@@ -33,13 +35,18 @@
     <!-- Hero / Intro Section -->
     <section id="hero-section" class="page">
       <div class="intro-container">
-        <h1>Hi. I am JNDR</h1>
-        <p>
-          I am an aspiring software engineer proficient in software <br>
-          and web development. My work includes creating user-friendly<br>
-          software and website interfaces, along with designing<br>
-          efficient database systems and backend development. 
-        </p>
+        <h1>Aspiring Software Engineer</h1>
+
+        <div class = "name-inline">
+           <h2>Hi. I am</h2> 
+        </div>
+
+        <div class = "name-inline2">
+            <h3>Janderick dela Cruz</h3>
+        </div>
+        
+       <div class="line-break">
+        
 
         <div class="button-container">
           <a href="#" class="download-btn">Download CV</a>
@@ -59,104 +66,162 @@
             </a>     
           </div>
         </div>
+        </div>
       </div>
 
       <div class="profile-image-container">
         <img src="/images/profile-sample-modified.png" alt="Profile Picture" />
       </div>
      
-      <div class="code-intro">
+    <div class="coding-media-box">
+    <video class="coding-video" autoplay loop muted playsinline>
+        <source src="path/to/your-coding-video.mp4" type="video/mp4">
+        <source src="path/to/your-coding-video.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+   </div>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about-section" class="page">
+    <div class="container-narrow">
+      <h1>About Me</h1>
+      <p>
+        I am an aspiring software engineer with a strong interest in building
+        efficient, scalable, and user-friendly applications. I enjoy solving
+        real-world problems through clean code and thoughtful system design.
+      </p>
+      <p>
+        My journey includes working with web technologies, backend systems,
+        and databases. I continuously strive to improve my skills by learning
+        modern frameworks, best practices, and industry-standard tools.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+
+  <section id="skill-section" class="page section-dark">
+    <div class="section-wrapper">
+      <h1 class="section-title">Skill set</h1>
+      <p class="section-subtitle">List of programming language I used for in my career journey</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="icon-slot"></div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <div class="icon-slot"></div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <div class="icon-slot"></div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+
+  <section id="project-section" class="page">
+    <div class="section-wrapper">
+      <h1 class="section-title">Projects</h1>
+      <p class="section-subtitle">Personal Projects I have made necessary for developing skills</p>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="icon-slot-large"></div>
+          <p class="project-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="view-project-btn">
+            View Project <span class="arrow">➜</span>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="icon-slot-large"></div>
+          <p class="project-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="view-project-btn">
+            View Project <span class="arrow">➜</span>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="icon-slot-large"></div>
+          <p class="project-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="view-project-btn">
+            View Project <span class="arrow">➜</span>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="icon-slot-large"></div>
+          <p class="project-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="view-project-btn">
+            View Project <span class="arrow">➜</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Contact Section -->
+  <section id="contact-section" class="page">
+    <div class="section-wrapper contact-wrapper">
+      
+      <div class="contact-info">
+        <h1 class="section-title">Let’s Talk</h1>
+        <p class="contact-sub">I’d like to hear from you!</p>
         
+        <div class="contact-item">
+          <div class="icon-slot-small"></div>
+          <span>jndr.dev@gmail.com</span>
+        </div>
+        
+        <div class="contact-item">
+          <div class="icon-slot-small"></div>
+          <span>+(63)9232323233</span>
+        </div>
       </div>
 
+      <div class="contact-form-container">
+        <form>
+          <div class="form-row">
+            <input type="text" placeholder="Firstname" required>
+            <input type="text" placeholder="Lastname" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" placeholder="Email Address *" required>
+          </div>
+          
+          <div class="form-group">
+            <textarea placeholder="Message...." rows="6" required></textarea>
+          </div>
 
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skill-section" class="page">
-      <h1>Skill sets</h1>
-      <h2>List of programming languages I have used in my career journey</h2>
-
-      <div class="skill-card-1">
-        <img src="/src/assets/html5.png" alt="C# Logo" />
-        <p>C#</p>
-      </div>
-
-      <div class="skill-card-2">
-        <img src="/src/assets/html5.png" alt="Database Logo" />
-        <p>Database</p>
-      </div>
-
-      <div class="skill-card-3">
-        <img src="/src/assets/html5.png" alt="Web Dev Logo" />
-        <p>Web Dev</p>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="project-section" class="page">
-      <h1>Projects</h1>
-      <h2>List of projects I have worked on</h2>
-
-      <div class="project-card-1">
-        <img src="/src/assets/project-1.png" alt="Project 1" />
-        <p>Project 1</p>
-        <p>Description</p>
-      </div>
-
-      <div class="project-card-2">
-        <img src="/src/assets/project-2.png" alt="Project 2" />
-        <p>Project 2</p>
-        <p>Description</p>
-      </div>
-
-      <div class="project-card-3">
-        <img src="/src/assets/project-3.png" alt="Project 3" />
-        <p>Project 3</p>
-        <p>Description</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact-section" class="page">
-      <h1>Let's connect</h1>
-      <h2>Feel free to reach out to me via any of the platforms below</h2>
-
-      <div class="contact-card-1">
-        <img src="/src/assets/email.png" alt="Email Logo" />
-        <p>jndr.jndr@gmail.com</p>
-        <p>Email</p>
-      </div>
-
-      <div class="contact-card-2">
-        <img src="/src/assets/phone.png" alt="Phone Logo" />
-        <p>+91 9876543210</p>
-        <p>Phone</p>
-      </div> 
-
-      <div class="contact-card-3">
-        <img src="/src/assets/linkedin.png" alt="LinkedIn Logo" />
-        <p>jndr-jndr</p>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <h2>Contact Form</h2>
-        <form action="#" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">Send</button>
+          <div class="button-wrapper">
+            <button type="submit">send</button>
+          </div>
         </form>
       </div>
-    </section>
 
+    </div>
+  </section>
+
+<!-- Footer Section -->
 
     <section id="footer-section" class="page">
       <div class="footer-container">
