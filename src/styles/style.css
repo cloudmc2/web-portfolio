@@ -143,17 +143,45 @@ input:checked + .slider:before {
 .intro-container{
   display: flex;
   flex-direction: column;
-  transform: translate(-40%, -10%);
+  /* transform: translate(-10%, 0%); */
  
-}
+} 
 
 .intro-container h1{
-  font-size: 3em;
+  font-size: 1.5em;
   margin: 0;
   background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+.intro-container h2{
+  font-size: 2.5em;
+}
+
+.intro-container h3{
+  font-size: 2.5em;
+   background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transform: translate(-10%, 90%);
+
+  
+}
+.name-inline {
+  display: flex;
+  align-items: center;
+}
+.name-inline2 {
+  transform: translate(2em, -7.4em);
+
+}
+.line-break{
+  transform: translate(0%, -25%);
+}
+
 
 .intro-container p{
   font-size: 1.2em;
@@ -223,13 +251,13 @@ input:checked + .slider:before {
 
 .profile-image-container img{
   border-radius: 50%;
-  transform: translate(50%, -45%);
+  transform: translate(60%, -45%);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
-  height: 40vh;
+  height: 35vh;
   overflow: hidden;
 }
 
