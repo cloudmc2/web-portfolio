@@ -138,12 +138,13 @@ input:checked + .slider:before {
   background-size: cover;       /* Fill entire section */
   background-position: center;  /* Center image */
   background-repeat: no-repeat; /* Prevent tiling */
+ 
 }
 
 .intro-container{
   display: flex;
   flex-direction: column;
-  /* transform: translate(-10%, 0%); */
+   transform: translate(10%,-10%); 
  
 } 
 
@@ -153,6 +154,7 @@ input:checked + .slider:before {
   background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: translate(0em, 1.1em);
 }
 
 
@@ -165,29 +167,29 @@ input:checked + .slider:before {
    background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  transform: translate(-10%, 90%);
-
   
 }
 .name-inline {
   display: flex;
   align-items: center;
+  transform: translate(0em, 4em);
 }
 .name-inline2 {
-  transform: translate(2em, -7.4em);
 
-}
-.line-break{
-  transform: translate(0%, -25%);
+
 }
 
 
-.intro-container p{
+.intro-role p{
   font-size: 1.2em;
   color: azure;
   text-justify: auto;
+  transform: translate(0em, -2em);
+  
+
 }
+
+
 
  .button-container a{
   background-color: #f3f7fe;
@@ -271,6 +273,83 @@ input:checked + .slider:before {
    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.About-me-text h1 {
+  font-size: 2.5em;
+  margin: 0;
+  background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translate(0%, -60%);
+
+}
+
+.About-description p{
+  ont-size: 1.1rem;
+  color: azure;
+
+  text-align: justify;      /* REQUIRED */
+  text-justify: inter-word; /* Better spacing */
+
+  line-height: 1.7;
+  max-width: 700px;         /* Key for readable justification */
+  
+}
+
+.section-wrapper h1{
+  font-size: 2.5em;
+  margin: 0;
+  background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translate(0%, -60%);
+}
+
+.skill-card{
+
+  box-sizing: border-box;
+  width: 290px;
+  height: 354px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+
+.skill-card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.skill-card:active{
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.skill-card {
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+}
+
+.skills-grid {
+  display: flex;           /* turns the div into a flex container */
+  gap: 2rem;               /* space between cards */
+  flex-wrap: wrap;         /* allows cards to move to next row */
+  justify-content: center; /* centers cards horizontally */
+  margin-top: 2rem;
+}
 
 
 
