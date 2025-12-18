@@ -308,7 +308,7 @@ input:checked + .slider:before {
 
   box-sizing: border-box;
   width: 290px;
-  height: 354px;
+  height: 454px;
   background: rgba(217, 217, 217, 0.58);
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -351,7 +351,78 @@ input:checked + .slider:before {
   margin-top: 2rem;
 }
 
+.projects-grid{
+   display: flex;           /* turns the div into a flex container */
+  gap: 2rem;               /* space between cards */
+  flex-wrap: wrap;         /* allows cards to move to next row */
+  justify-content: center; /* centers cards horizontally */
+  margin-top: 2rem;
+}
+
+
+.project-card{ 
+  padding: 20px;
+  width: 330px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: #212121;
+  box-shadow: 5px 5px 8px #1b1b1b,
+             -5px -5px 8px #272727;
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  translate: 0 -10px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b2eccf;
+  margin: 15px 0 0 10px;
+}
+
+.project-image-slot {
+  min-height: 170px;
+  background-color: #313131;
+  border-radius: 15px;
+  background: #313131;
+  box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+
+.project-desc {
+  margin: 13px 0 0 10px;
+  color: rgb(184, 184, 184);
+  font-size: 15px;
+}
+
+.contact-card{
+ width: 1200px;
+ height: 700px;
+ background: rgb(12, 11, 11);
+ border-radius: 0.4em;
+ box-shadow: 0.3em 0.3em 0.7em #00000015;
+ transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ border: rgb(250, 250, 250) 0.2em solid;
+}
+
+.contact-card:hover{
+  border: #006fff 0.2em solid;
+}
 
 
 
 
+
+@media (max-width: 768px) {
+  .skills-grid {
+    flex-direction: column; /* Stack cards vertically on small screens */
+    align-items: center;    /* Center cards */
+  }
+}
+
+
+
+
+ 
