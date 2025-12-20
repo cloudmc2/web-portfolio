@@ -304,12 +304,24 @@ input:checked + .slider:before {
   transform: translate(0%, -60%);
 }
 
+.icon-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-slot svg {
+  width: 48px;
+  height: 48px;
+  color: #4fc3f7; /* accent color */
+}
+
 .skill-card{
 
   box-sizing: border-box;
   width: 290px;
   height: 454px;
-  background: rgba(217, 217, 217, 0.58);
+  background: rgba(12, 11, 11, 0.58);
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(6px);
@@ -342,6 +354,12 @@ input:checked + .slider:before {
 .skill-card p {
   font-size: 0.9rem;
 }
+.skill-desc{
+ color: rgba(234, 255, 255);
+  font-weight: lighter;
+  margin-top: 1rem;
+  
+}
 
 .skills-grid {
   display: flex;           /* turns the div into a flex container */
@@ -349,6 +367,14 @@ input:checked + .slider:before {
   flex-wrap: wrap;         /* allows cards to move to next row */
   justify-content: center; /* centers cards horizontally */
   margin-top: 2rem;
+}
+
+.skill-title{
+  font-size: 1.1em;
+   background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translate(0%, -60%);
 }
 
 .projects-grid{
@@ -365,7 +391,7 @@ input:checked + .slider:before {
   width: 330px;
   min-height: 370px;
   border-radius: 20px;
-  background: #212121;
+  background: rgba(12, 11, 11, 0.58);
   box-shadow: 5px 5px 8px #1b1b1b,
              -5px -5px 8px #272727;
   transition: 0.4s;
@@ -378,7 +404,9 @@ input:checked + .slider:before {
 .project-title {
   font-size: 18px;
   font-weight: 600;
-  color: #b2eccf;
+  background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 15px 0 0 10px;
 }
 
@@ -389,6 +417,11 @@ input:checked + .slider:before {
   background: #313131;
   box-shadow: inset 5px 5px 3px #2f2f2f,
             inset -5px -5px 3px #333333;
+
+  background-image: url(https://assets.lightspeedhq.com/img/c105e8a8-retail_products_inventory-management_half-width-2.jpg);
+   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%; /* adjust this value */
 }
 
 .project-desc {
@@ -398,8 +431,8 @@ input:checked + .slider:before {
 }
 
 .contact-card{
- width: 1200px;
- height: 700px;
+ width: 1400px;
+ height: 800px;
  background: rgb(12, 11, 11);
  border-radius: 0.4em;
  box-shadow: 0.3em 0.3em 0.7em #00000015;
@@ -411,8 +444,122 @@ input:checked + .slider:before {
   border: #006fff 0.2em solid;
 }
 
+.contact-info h1{
+  font-size: 2.5em;
+  transform: translate(3.5em, 1em);
+}
+.contact-info p{
+  font-size: 1.2em;
+  transform: translate(7.3em, 2.5em);
+}
+/* Target the container for each individual contact row */
+.contact-item {
+  display: flex;
+  flex-direction: row;   /* Puts Icon next to Text */
+  align-items: center;   /* Aligns them vertically in the middle */
+  gap: 15px;             /* Space between the SVG and the Text */
+  margin-bottom: 20px;   /* Space between the Email row and Phone row */
+  color: white;          /* Ensures text is visible on dark background */
+}
 
+/* Optional: Fix the icon container size if needed */
+.icon-slot-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;          /* Fixed width for alignment */
+  height: 40px;
+}
 
+/* Update the main container positioning */
+/* Instead of transform: translate, use padding or margin on the parent */
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Stacks the Email row on top of Phone row */
+  justify-content: center;
+  padding-left: 2rem;     /* Moves content nicely away from the edge */
+}
+
+.contact-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translate(7em, 8em);
+}
+
+.contact-form-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translate(10em, 20em);
+  font: 1.2em;
+}
+
+/* 1. Base Variables */
+:root {
+    --accent-color: #2dd4bf; /* Your Teal color */
+    --border-color: rgba(255, 255, 255, 0.2); /* 20% opacity white */
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+
+    transform: translate(45em, -1em);
+}
+
+/* 2. Transparent Input Styling */
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    
+    /* Make background invisible */
+    background: transparent; 
+    
+    /* Subtle semi-transparent white border */
+    border: 1px solid var(--border-color); 
+    
+    color: #ffffff;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+    box-sizing: border-box; /* Fixes width issues */
+}
+
+/* 3. Focus State (When clicked) */
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: var(--accent-color);
+    background: rgba(45, 212, 191, 0.05); /* Very faint teal tint */
+}
+
+/* 4. Placeholder Text (Making it lighter gray) */
+.contact-form-container input::placeholder,
+.contact-form-container textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* 5. Button Styling */
+.button-wrapper button {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.button-wrapper button:hover {
+    background: var(--accent-color);
+    color: #000;
+}
 
 
 @media (max-width: 768px) {
