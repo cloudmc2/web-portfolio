@@ -8,34 +8,58 @@
  <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="logo">
-        <a href="#">JNDR</a>
-      </div>
+   <nav>
+  <div class="logo">
+    <a href="#">JNDR</a>
+  </div>
 
-      <div class="menu">
-      <ul>
+  <ul class="nav-list">
+    <li class="close-button">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30px" width = "30px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+        </svg>
+      </a>
+    </li>
+    <li><a href="#hero-section">Home</a></li>
+    <li><a href="#about-section">About Me</a></li>
+    <li><a href="#skill-section">Skills</a></li>
+    <li><a href="#project-section">Projects</a></li>
+    <li><a href="#contact-section">Contact</a></li>
 
-     
-       <li><a href="#hero-section">Home</a></li> 
-        <li><a href="#about-section">About Me</a> </li>
-        <li><a href="#skill-section">Skills</a> </li>
-       <li> <a href="#project-section">Projects</a> </li>
-       <li><a href="#contact-section">Contact</a> </li>
+  </ul>
 
+  <ul class="desktop-menu">
+    <li class="hide-on-mobile"><a href="#hero-section">Home</a></li>
+    <li class="hide-on-mobile"><a href="#about-section">About Me</a></li>
+    <li class="hide-on-mobile"><a href="#skill-section">Skills</a></li>
+    <li class="hide-on-mobile"><a href="#project-section">Projects</a></li>
+    <li class="hide-on-mobile"><a href="#contact-section">Contact</a></li>
+    <li class="open-button">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 -960 960 960" fill="#e3e3e3">
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
 
-      <label class="switch">
-      <input type="checkbox">
-      <span class="slider"></span>
-      </label>
-       </ul>
-      </div>
-    </nav>
+</nav>
+
+<div class = "theme-switcher-container">
+  <input type="checkbox" id="theme-switcher" />
+  <label for="theme-switcher" class="theme-switcher-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+</div>
+
 
     <!-- Hero / Intro Section -->
     <section id="hero-section" class="page">
       <div class="intro-container">
-        <h1>Aspiring Software Engineer</h1>
+        <h1>Aspiring Software Developer</h1>
 
         <div class = "name-inline">
            <h2>Hi. I am</h2> 
@@ -47,7 +71,7 @@
 
      <div class="intro-role">
       <p>
-  I’m an aspiring software engineer passionate about building efficient,<br>
+  I’m an aspiring software developer passionate about building efficient,<br>
   scalable, and user-friendly applications. I enjoy solving<br>
   real-world problems through clean code and thoughtful<br>
   system design.
@@ -63,7 +87,7 @@
         </div>
 
         <div class="social-links">
-          <span>Social Links:</span>
+          <span class = "social-text">Social Links:</span>
           <div class="icons">
             <a href="#"><i class="fab fa-github"></i>
               <img src="/images/icon1.png" alt="GitHub Logo" height="50px" />
@@ -83,13 +107,13 @@
         <img src="/images/profile-sample-modified.png" alt="Profile Picture" />
       </div>
      
-    <div class="coding-media-box">
+    <!-- <div class="coding-media-box">
     <video class="coding-video" autoplay loop muted playsinline>
         <source src="path/to/your-coding-video.mp4" type="video/mp4">
         <source src="path/to/your-coding-video.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
-   </div>
+   </div> -->
 
     </section>
 
@@ -104,7 +128,7 @@
     <div class="About-description">
     
 <p>
-  I am an aspiring software engineer with a strong interest in building
+  I am an aspiring software developer with a strong interest in building
   efficient, scalable, and user-friendly applications. I enjoy solving
   real-world problems through clean code and thoughtful system design,
   and I’m driven by the challenge of turning ideas into reliable software. <br><br>
