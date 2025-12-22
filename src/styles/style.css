@@ -328,7 +328,7 @@ input:checked + .slider:before {
 }
 
 .About-description p{
-  ont-size: 1.1rem;
+  font-size: 1.1rem;
   color: azure;
 
   text-align: justify;      /* REQUIRED */
@@ -705,6 +705,11 @@ input:checked + .slider:before {
   .open-button {
     display: flex;
     cursor: pointer;
+  }
+
+  .open-button{
+   transform: translate(10em, 0.5em);
+
   }
 
   /* Sidebar styling (when active) */
