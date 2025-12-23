@@ -7,10 +7,19 @@
  </head> 
  <body>
 
+  <!-- From Uiverse.io by ashish-yadv --> 
+ <div class = "load-wrapper">
+<div class="loader">
+  <li class="ball"></li>
+  <li class="ball"></li>
+  <li class="ball"></li>
+</div>
+</div>  
+
     <!-- Navigation Bar -->
    <nav>
-  <div class="logo">
-    <a href="#">JNDR</a>
+  <div >
+    <a href="#"><img src="/images/logo.png" alt="Logo" height="150px" width="auto" /></a>
   </div>
 
   <ul class="nav-list">
@@ -57,9 +66,12 @@
 
 
     <!-- Hero / Intro Section -->
+     <div class = "hidden">
     <section id="hero-section" class="page">
       <div class="intro-container">
+        <div class="intro-text">
         <h1>Aspiring Software Developer</h1>
+        </div>
 
         <div class = "name-inline">
            <h2>Hi. I am</h2> 
@@ -69,12 +81,13 @@
             <h3>Janderick dela Cruz</h3>
         </div>
 
+
+    
+
      <div class="intro-role">
       <p>
   I’m an aspiring software developer passionate about building efficient,<br>
-  scalable, and user-friendly applications. I enjoy solving<br>
-  real-world problems through clean code and thoughtful<br>
-  system design.
+  scalable, and user-friendly applications.
 </p>
 </div>
 
@@ -116,9 +129,9 @@
    </div> -->
 
     </section>
-
+ </div>
     <!-- About Section -->
-
+   <div class  = "hidden">
     <section id="about-section" class="page">
     <div class="about-container-narrow">
     <div class = "About-me-text">
@@ -150,9 +163,10 @@
 </div>  
     </div>
   </section>
+   </div>
 
   <!-- Skills Section -->
-
+<div class = "hidden">
   <section id="skill-section" class="page section-dark">
     <div class="section-wrapper">
       <h1 class="section-title">Skill set</h1>
@@ -279,8 +293,9 @@
 
     </div>
   </section>
-
+</div>
 <!-- Projects Section -->
+ <div class = "hidden">
 <section id="project-section" class="page">
   <div class="section-wrapper">
     <h1 class="section-title">Projects</h1>
@@ -319,8 +334,9 @@
     </div>
   </div>
 </section>
-
+</div>
 <!-- Contact Section -->
+ <div class = "hidden">
   <section id="contact-section" class="page">
     <div class="section-wrapper contact-wrapper">
       <div class = "contact-card">
@@ -396,15 +412,15 @@
       </div>
     </div>
   </section>
-
+</div>
 <!-- Footer Section -->
-
+<div class = "hidden">
     <section id="footer-section" class="page">
       <div class="footer-container">
         <p>Copyright © 2025 JNDR</p>
       </div>
     </section>
-
+</div>
     <!-- Main JS -->
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
