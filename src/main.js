@@ -1,4 +1,12 @@
 import './styles/style.css'
+import $ from 'jquery'; // <--- YOU MUST ADD THIS LINE
+
+
+//loader //jquery
+$(window).on('load', function() {
+  $('.loader').delay(500).fadeOut('slow');
+  $('.load-wrapper').delay(500).fadeOut('slow');
+});
 
 // 1. Select the elements
 const sidebar = document.querySelector('.nav-list');
@@ -15,4 +23,25 @@ openBtn.addEventListener('click', (e) => {
 closeBtn.addEventListener('click', (e) => {
   e.preventDefault();
   sidebar.style.display = 'none';
+});
+
+
+// scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+
+  } else{
+    entry.target.classList.remove('show');
+    
+  }
+
+});
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => {
+  observer.observe(el);
 });

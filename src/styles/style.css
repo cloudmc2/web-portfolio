@@ -588,6 +588,83 @@ input:checked + .slider:before {
   padding: 20px;
 }
 
+/* Scroll Animation */
+
+/* 1. Define the hidden state first */
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+/* 2. Define the show state AFTER hidden so it overrides it */
+.show {
+  opacity: 1;
+}
+
+/*loader*/
+
+.load-wrapper {
+  width: 100%;
+  height: 100vh;       /* Use 100vh to ensure it fills the full screen height */
+  position: fixed;     /* Use fixed so it stays on top even if scrolling happens */
+  top: 0;
+  left: 0;
+  background-color: #000;
+  
+  /* --- The Missing Line --- */
+  display: flex;       
+  /* ------------------------ */
+
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;       /* Ensures it sits on top of your Navbar (which is z-index: 100) */
+}
+/* From Uiverse.io by ashish-yadv */ 
+.loader {
+  width: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.ball {
+  list-style: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.ball:nth-child(1) {
+  animation: bounce-1 2.1s ease-in-out infinite;
+}
+
+@keyframes bounce-1 {
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.ball:nth-child(2) {
+  animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+}
+
+@keyframes bounce-2 {
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.ball:nth-child(3) {
+  animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+}
+
+@keyframes bounce-3 {
+  50% {
+    transform: translateY(-18px);
+  }
+}
 /* ============================================
    RESPONSIVE BREAKPOINTS
    ============================================ */
