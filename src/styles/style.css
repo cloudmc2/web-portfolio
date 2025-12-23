@@ -5,63 +5,60 @@ html {
 
 /* Global page styling */
 body {
-  background-color: #050A30;      /* Dark background theme */
-  margin: 0;                      /* Remove default browser margin */
-  font-family: Arial, sans-serif; /* Set default font */
-  color: azure;                   /* Default text color */
+  background-color: #050A30;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: azure;
 }
 
 /* Generic full-screen section styling */
 .page {
-  min-height: 100vh;              /* Make each section at least full viewport height */
-  display: flex;                  /* Use flexbox for alignment */
-  align-items: center;            /* Vertically center content */
-  justify-content: center;        /* Horizontally center content */
-  padding: 60px 20px;             /* Inner spacing for content */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
 }
 
 /* Navigation bar styling */
 nav {
-  display: flex;                  /* Horizontal layout */
-  justify-content: space-evenly;  /* Even spacing between items */
-  align-items: center;            /* Vertically center items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 20px;
-
-  background: transparent;        /* Transparent background */
-  backdrop-filter: blur(10px);    /* Frosted glass blur effect */
+  height: 100px;
+  background: transparent;
+  backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.08);
-
-  position: fixed;                /* Keep navbar visible on scroll */
+  position: fixed;
   top: 0;
-  z-index: 100;                   /* Stay above all content */
+  z-index: 100;
+  padding: 0 60px;
+  box-sizing: border-box;
 }
 
-/* Remove default list styling and align nav items */
 nav ul {
-  list-style-type: none;          /* Remove bullets */
+  list-style-type: none;
   margin: 0;
   padding: 0;
   gap: 10px;
-  display: flex;                  /* Horizontal list */
+  display: flex;
   justify-content: center;
 }
 
-/* Navigation links */
 nav li a {
   display: block;
   color: azure;
-  text-decoration: none;          /* Remove underline */
-  position: relative;             /* Required for hover underline */
-  padding: 10px 20px;
-  transition: color 0.3s;         /* Smooth hover transition */
+  text-decoration: none;
+  position: relative;
+  padding: 5px 20px;
+  transition: color 0.3s;
 }
 
-/* Underline animation (initially hidden) */
 nav li a::before {
   content: "";
   position: absolute;
-  width: 0;                       /* Start hidden */
+  width: 0;
   height: 2px;
   background-color: #16eaf1;
   bottom: 0;
@@ -69,17 +66,14 @@ nav li a::before {
   transition: width 0.4s;
 }
 
-/* Link hover color */
 nav li a:hover {
   color: #16eaf1;
 }
 
-/* Reveal underline on hover */
 nav li a:hover::before {
   width: 100%;
 }
 
-/* Hide checkbox */
 #nav-toggle {
   display: none;
 }
@@ -89,18 +83,17 @@ nav li a:hover::before {
   gap: 10px;
 }
 
-
 .nav-list {
-  position: fixed; /* FIXED TYPO HERE */
+  position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: 250px;
   z-index: 999;
   backdrop-filter: blur(10px);
-  background-color: rgba(5, 10, 48, 0.9); /* Made darker for visibility */
+  background-color: rgba(5, 10, 48, 0.9);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -115,15 +108,11 @@ nav li a:hover::before {
   width: 100%;
 }
 
-/* RESPONSIVE LOGIC */
-
-/* Default: Hide the hamburger button on Desktop */
 .open-button {
   display: none;
 }
 
-
-/* Theme switch container */
+/* Theme switch */
 .switch {
   margin-top: 2px;
   margin-left: auto;
@@ -133,16 +122,14 @@ nav li a:hover::before {
   height: 2em;
 }
 
-/* Hide the default checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Slider background */
 .slider {
-  --background: #28096b;           /* Default slider background */
+  --background: #28096b;
   position: absolute;
   cursor: pointer;
   inset: 0;
@@ -151,7 +138,6 @@ nav li a:hover::before {
   border-radius: 30px;
 }
 
-/* Slider knob */
 .slider:before {
   content: "";
   position: absolute;
@@ -165,77 +151,84 @@ nav li a:hover::before {
   transition: 0.5s;
 }
 
-/* Slider active state */
 input:checked + .slider {
   background-color: #522ba7;
 }
 
-/* Move knob when active */
 input:checked + .slider:before {
   transform: translateX(100%);
   box-shadow: inset 15px -4px 0px 15px #fff000;
 }
 
-/* Hero section background image */
+/* Hero section */
 #hero-section {
-  background-image: url("/images/hero-section-bg.png"); /* Hero background image */
-  background-size: cover;       /* Fill entire section */
-  background-position: center;  /* Center image */
-  background-repeat: no-repeat; /* Prevent tiling */
- 
+  background-image: url("/images/hero-section-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120px 40px 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
 }
 
-.intro-container{
+.intro-container {
   display: flex;
   flex-direction: column;
-   transform: translate(10%,-10%); 
- 
-} 
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
 
-.intro-container h1{
+.intro-container h1 {
   font-size: 1.5em;
   margin: 0;
   background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: translate(0em, 1.1em);
 }
 
-
-.intro-container h2{
-  font-size: 2.5em;
+.intro-container h2 {
+  font-size: 2.5em; 
+  margin: 10px 0 5px 0;
+  display: inline;
 }
 
-.intro-container h3{
+.intro-container h3 {
   font-size: 2.5em;
-   background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  margin: 5px 0 10px 0;
+  background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+  display: inline;
 }
+
 .name-inline {
   display: flex;
-  align-items: center;
-  transform: translate(0em, 4em);
-}
-.name-inline2 {
-
-
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-
-.intro-role p{
+.intro-role p {
   font-size: 1.2em;
   color: azure;
-  text-justify: auto;
-  transform: translate(0em, -2em);
-  
-
+  line-height: 1.6;
+  margin: 20px 0;
 }
 
+.line-break {
+  margin-top: 30px;
+}
 
+.button-container {
+  margin-bottom: 20px;
+}
 
- .button-container a{
+.button-container a {
   background-color: #f3f7fe;
   color: #3b82f6;
   border: none;
@@ -244,127 +237,138 @@ input:checked + .slider:before {
   width: 200px;
   height: 45px;
   transition: 0.3s;
-  display: flex;
+  display: inline-flex;
   text-decoration: none;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
 }
 
- .button-container a:hover{
+.button-container a:hover {
   background-color: #3b82f6;
   box-shadow: 0 0 0 5px #3b83f65f;
   color: #fff;
 }
 
-.social-links{
+.social-links {
   display: flex;
+  align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
-.social-links span{
+
+.social-links span {
   color: azure;
   font-size: 1.1em;
-  transition: 0.3s;
-  text-decoration: none;
 }
 
-.icons{
+.icons {
   display: flex;
   gap: 15px;
-  transform: translate(-65%, 70%);
 }
 
-.social-links a{
+.social-links a {
   position: relative;
-  justify-content: space-evenly;
   text-decoration: none;
 }
 
-.social-links a img{
-    border-radius: 50%;
-}
-
-.social-links a img:hover{
-  transform: scale(1.1);
-   box-shadow: 
-    0 0 10px #ff00ff, /* Inner glow */
-    0 0 30px #ff00ff, /* Middle glow */
-    0 0 50px #ff00ff; /* Outer glow */
-
-    
-   transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.profile-image-container img{
+.social-links a img {
   border-radius: 50%;
-  transform: translate(60%, -45%);
-  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-links a img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff00ff, 0 0 30px #ff00ff, 0 0 50px #ff00ff;
+}
+
+.profile-image-container {
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: 35vh;
-  overflow: hidden;
 }
 
-.profile-image-container img:hover{
-  transform: scale(1.05) translate(50%, -45%);
-  box-shadow: 
-    0 0 10px #00ffff, /* Inner glow */
-    0 0 30px #00ffff, /* Middle glow */
-    0 0 50px #00ffff; /* Outer glow */
-    
-   transition: transform 0.3s, box-shadow 0.3s;
+.profile-image-container img {
+  border-radius: 50%;
+  width: auto;
+  height: 40vh;
+  max-width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff, 0 0 50px #00ffff;
+}
+
+/* About Section */
+.about-container-narrow {
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .About-me-text h1 {
   font-size: 2.5em;
-  margin: 0;
+  margin: 0 0 30px 0;
   background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: translate(0%, -60%);
-
 }
 
-.About-description p{
+.About-description p {
   font-size: 1.1rem;
   color: azure;
-
-  text-align: justify;      /* REQUIRED */
-  text-justify: inter-word; /* Better spacing */
-
+  text-align: justify;
+  text-justify: inter-word;
   line-height: 1.7;
-  max-width: 700px;         /* Key for readable justification */
-  
 }
 
-.section-wrapper h1{
+/* Skills Section */
+.section-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.section-wrapper h1 {
   font-size: 2.5em;
-  margin: 0;
+  margin: 0 0 20px 0;
   background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: translate(0%, -60%);
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .icon-slot {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .icon-slot svg {
   width: 48px;
   height: 48px;
-  color: #4fc3f7; /* accent color */
+  color: #4fc3f7;
 }
 
-.skill-card{
-
+.skill-card {
   box-sizing: border-box;
-  width: 290px;
-  height: 454px;
+  width: 100%;
+  min-height: 400px;
   background: rgba(12, 11, 11, 0.58);
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -374,11 +378,10 @@ input:checked + .slider:before {
   cursor: pointer;
   transition: all 0.5s;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  user-select: none;
-  font-weight: bolder;
-  color: black;
+  justify-content: flex-start;
+  padding: 2rem 1.5rem;
 }
 
 .skill-card:hover {
@@ -386,63 +389,47 @@ input:checked + .slider:before {
   transform: scale(1.05);
 }
 
-.skill-card:active{
+.skill-card:active {
   transform: scale(0.95) rotateZ(1.7deg);
 }
 
-.skill-card {
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.skill-card p {
-  font-size: 0.9rem;
-}
-.skill-desc{
- color: rgba(234, 255, 255);
-  font-weight: lighter;
-  margin-top: 1rem;
-  
-}
-
-.skills-grid {
-  display: flex;           /* turns the div into a flex container */
-  gap: 2rem;               /* space between cards */
-  flex-wrap: wrap;         /* allows cards to move to next row */
-  justify-content: center; /* centers cards horizontally */
-  margin-top: 2rem;
-}
-
-.skill-title{
-  font-size: 1.1em;
-   background: -webkit-linear-gradient(#2A7B9B, #57C785);
+.skill-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: translate(0%, -60%);
+  margin: 10px 0;
 }
 
-.projects-grid{
-   display: flex;           /* turns the div into a flex container */
-  gap: 2rem;               /* space between cards */
-  flex-wrap: wrap;         /* allows cards to move to next row */
-  justify-content: center; /* centers cards horizontally */
+.skill-desc {
+  color: rgba(234, 255, 255);
+  font-weight: lighter;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-
-.project-card{ 
+.project-card {
   padding: 20px;
-  width: 330px;
+  width: 100%;
   min-height: 370px;
   border-radius: 20px;
   background: rgba(12, 11, 11, 0.58);
-  box-shadow: 5px 5px 8px #1b1b1b,
-             -5px -5px 8px #272727;
+  box-shadow: 5px 5px 8px #1b1b1b, -5px -5px 8px #272727;
   transition: 0.4s;
+  box-sizing: border-box;
 }
 
 .project-card:hover {
-  translate: 0 -10px;
+  transform: translateY(-10px);
 }
 
 .project-title {
@@ -458,278 +445,173 @@ input:checked + .slider:before {
   min-height: 170px;
   background-color: #313131;
   border-radius: 15px;
-  background: #313131;
-  box-shadow: inset 5px 5px 3px #2f2f2f,
-            inset -5px -5px 3px #333333;
-
+  box-shadow: inset 5px 5px 3px #2f2f2f, inset -5px -5px 3px #333333;
   background-image: url(https://assets.lightspeedhq.com/img/c105e8a8-retail_products_inventory-management_half-width-2.jpg);
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%; /* adjust this value */
+  background-size: cover;
 }
 
 .project-desc {
   margin: 13px 0 0 10px;
   color: rgb(184, 184, 184);
   font-size: 15px;
+  line-height: 1.5;
 }
 
-.contact-card{
- width: 1400px;
- height: 800px;
- background: rgb(12, 11, 11);
- border-radius: 0.4em;
- box-shadow: 0.3em 0.3em 0.7em #00000015;
- transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
- border: rgb(250, 250, 250) 0.2em solid;
+/* Contact Section */
+.contact-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
 }
 
-.contact-card:hover{
+.contact-card {
+  width: 100%;
+  background: rgb(12, 11, 11);
+  border-radius: 0.4em;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: rgb(250, 250, 250) 0.2em solid;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact-card:hover {
   border: #006fff 0.2em solid;
 }
 
-.contact-info h1{
-  font-size: 2.5em;
-  transform: translate(3.5em, 1em);
-}
-.contact-info p{
-  font-size: 1.2em;
-  transform: translate(7.3em, 2.5em);
-}
-/* Target the container for each individual contact row */
-.contact-item {
-  display: flex;
-  flex-direction: row;   /* Puts Icon next to Text */
-  align-items: center;   /* Aligns them vertically in the middle */
-  gap: 15px;             /* Space between the SVG and the Text */
-  margin-bottom: 20px;   /* Space between the Email row and Phone row */
-  color: white;          /* Ensures text is visible on dark background */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
 }
 
-/* Optional: Fix the icon container size if needed */
+.contact-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(#2A7B9B, #57C785);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-sub {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
 .icon-slot-small {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;          /* Fixed width for alignment */
+  width: 40px;
   height: 40px;
+  flex-shrink: 0;
 }
 
-/* Update the main container positioning */
-/* Instead of transform: translate, use padding or margin on the parent */
-.contact-info {
-  display: flex;
-  flex-direction: column; /* Stacks the Email row on top of Phone row */
-  justify-content: center;
-  padding-left: 2rem;     /* Moves content nicely away from the edge */
-}
-
-.contact-list{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transform: translate(7em, 8em);
-}
-
-.contact-form-container{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transform: translate(10em, 20em);
-  font: 1.2em;
-}
-
-/* 1. Base Variables */
-:root {
-    --accent-color: #2dd4bf; /* Your Teal color */
-    --border-color: rgba(255, 255, 255, 0.2); /* 20% opacity white */
+.email-slot, .phone-slot {
+  word-break: break-word;
 }
 
 .contact-form-container {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
-
-    transform: translate(45em, -1em);
+  flex: 1;
+  min-width: 300px;
 }
 
-/* 2. Transparent Input Styling */
+:root {
+  --accent-color: #2dd4bf;
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
 .contact-form-container input,
 .contact-form-container textarea {
-    width: 100%;
-    
-    /* Make background invisible */
-    background: transparent; 
-    
-    /* Subtle semi-transparent white border */
-    border: 1px solid var(--border-color); 
-    
-    color: #ffffff;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s ease;
-    box-sizing: border-box; /* Fixes width issues */
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: #ffffff;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+  box-sizing: border-box;
 }
 
-/* 3. Focus State (When clicked) */
 .contact-form-container input:focus,
 .contact-form-container textarea:focus {
-    border-color: var(--accent-color);
-    background: rgba(45, 212, 191, 0.05); /* Very faint teal tint */
+  border-color: var(--accent-color);
+  background: rgba(45, 212, 191, 0.05);
 }
 
-/* 4. Placeholder Text (Making it lighter gray) */
 .contact-form-container input::placeholder,
 .contact-form-container textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
-/* 5. Button Styling */
 .button-wrapper button {
-    background: transparent;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    padding: 10px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s;
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 .button-wrapper button:hover {
-    background: var(--accent-color);
-    color: #000;
+  background: var(--accent-color);
+  color: #000;
 }
 
-
-@media (max-width: 800px) {
-  .skills-grid {
-    flex-direction: column; /* Stack cards vertically on small screens */
-    align-items: center;    /* Center cards */
-  }
-
-.intro-container{
-  font-size: 1em;
-  transform: translate(1em, 2em);
-}
-.social-text{
-  font-size: 1.1em;
-  white-space: nowrap; /* Forces text to stay on one line */
-   transform: translate(2em, 0.5em);
-  
-}
-.social-links{
-  transform: translate(70%, 70%);
-}
-.button-container a{
-  transform: translate(14em, 3em);
-  height: 40px;
-  width: 150px;
+/* Footer */
+.footer-container {
+  text-align: center;
+  padding: 20px;
 }
 
-.intro-role p {
-    /* 1. Force the text to take up 100% of the container's width */
-    width: 100%;
-    max-width: 100%; /* Removes the "squash" limit */
-    
-    /* 2. Make it a perfect block (straight edges on left and right) */
-    text-align: justify;
-    text-justify: inter-word; 
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
 
-    /* 3. Add spacing so it doesn't touch the border lines */
-    padding: 20px; 
-    box-sizing: border-box; 
-    
-    /* Optional: Fixes weird gaps in long words */
-    hyphens: auto; 
-    transform: translate(10em, 2em);
-}
-
-
-  .intro-role p {
-    font-size: 1em;
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  nav {
+    height: 80px;
+    padding: 0 30px;
   }
 
-  .profile-image-container img {
-   
-    height: 30vh;
-    transform: translate(-8em, -15em);
-
-  }
-
-
-
-    .contact-card {
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-  }
-
-  .contact-list {
-    transform: none;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-form-container {
-    transform: none;
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .contact-info h1,
-  .contact-info p {
-    transform: none;
-    text-align: center;
-  }
-
-  .contact-item {
-    justify-content: center;
-  }
-
-  .desktop-menu {
-    display: flex; 
-  }
-
-  
-   /* Hide desktop menu */
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 
-  /* Hamburger button */
   .open-button {
     display: flex;
     cursor: pointer;
   }
 
-  .open-button{
-   transform: translate(10em, 0.5em);
-
-  }
-
-  /* Sidebar styling (when active) */
   .nav-list {
-    /* Keep your existing styles here */
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 350px;
-    z-index: 999;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 20px;
+    width: 280px;
   }
 
-
-
-  /* Show menu when active (toggle with JS) */
   .nav-list.active {
     display: flex;
   }
@@ -740,17 +622,267 @@ input:checked + .slider:before {
     padding: 1rem;
   }
 
-  .nav-list li {
-    margin: 1.5rem 0;
+  /* Hero Section */
+  #hero-section {
+    padding: 100px 20px 40px;
+    flex-direction: column;
+  }
+
+  .intro-container {
+    text-align: center;
+  }
+
+  .intro-container h1 {
+    font-size: 1.2em;
+  }
+
+  .intro-container h2,
+  .intro-container h3 {
+    font-size: 2em;
+    margin: 5px 0;
+  }
+
+  .name-inline {
+    justify-content: center;
+  }
+
+  .intro-role p {
+    font-size: 1em;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .profile-image-container {
+    margin-top: 60px;
+    order: 1; /* Ensures it comes after intro-container */
+  }
+
+  .intro-container {
+    order: 2;
+  }
+
+  .profile-image-container img {
+    height: 30vh;
+  }
+
+  /* About Section */
+  .About-me-text h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .About-description p {
+    font-size: 1rem;
+  }
+
+  /* Skills & Projects */
+  .section-wrapper h1 {
+    font-size: 2em;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+   display: flex !important;
+    flex-direction: column !important; /* Stack cards vertically */
+    align-items: center !important;    /* Center cards horizontally */
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 30px; /* Space between cards */
+  }
+
+  .skill-card {
+    width: 60%;
+  }
+  .project-card{
+    width: 60%;
+  }
+
+  /* Contact Section */
+  .contact-card {
+    padding: 2rem;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .contact-info h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .contact-sub {
+    text-align: center;
+  }
+
+  .contact-list {
+    align-items: center;
+  }
+
+  .contact-item {
+    justify-content: center;
   }
 }
 
+/* Mobile - 600px and below */
+@media (max-width: 600px) {
+  nav {
+    height: 70px;
+    padding: 0 20px;
+  }
 
+  nav img {
+    height: 80px !important;
+  }
 
+  /* Hero Section */
+  #hero-section {
+    padding: 90px 15px 30px;
+  }
 
+  .intro-container h1 {
+    font-size: 1em;
+  }
 
+  .intro-container h2,
+  .intro-container h3 {
+    font-size: 1.5em;
+    margin: 3px 0;
+  }
 
+  .intro-role p {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
 
+  .button-container a {
+    width: 160px;
+    height: 40px;
+    font-size: 0.9em;
+  }
 
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
 
- 
+  .icons {
+    gap: 10px;
+  }
+
+  .social-links a img {
+    height: 40px !important;
+  }
+
+  .profile-image-container {
+    margin-top: 80px;
+    order: 1;
+  }
+
+  .intro-container {
+    order: 2;
+  }
+
+  .profile-image-container img {
+    height: 25vh;
+  }
+
+  /* About Section */
+  .About-me-text h1 {
+    font-size: 1.8em;
+  }
+
+  .About-description p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  /* Skills & Projects */
+  .section-wrapper {
+    padding: 0 15px;
+  }
+
+  .section-wrapper h1 {
+    font-size: 1.8em;
+  }
+
+  .section-subtitle {
+    font-size: 0.9em;
+  }
+
+  .skill-card {
+    min-height: 350px;
+    padding: 1.5rem 1rem;
+  }
+
+  .skill-title {
+    font-size: 1.1em;
+  }
+
+  .skill-desc {
+    font-size: 0.85rem;
+  }
+
+  .project-card {
+    min-height: 320px;
+  }
+
+  /* Contact Section */
+  .contact-card {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .contact-info h1 {
+    font-size: 1.8em;
+  }
+
+  .contact-sub {
+    font-size: 1em;
+  }
+
+  .contact-item {
+    font-size: 0.9em;
+  }
+
+  .icon-slot-small {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-form-container input,
+  .contact-form-container textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .button-wrapper button {
+    padding: 8px 25px;
+    font-size: 0.9em;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .intro-container h2,
+  .intro-container h3 {
+    font-size: 1.3em;
+  }
+
+  .About-me-text h1,
+  .section-wrapper h1,
+  .contact-info h1 {
+    font-size: 1.5em;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    gap: 1.5rem;
+  }
+}
