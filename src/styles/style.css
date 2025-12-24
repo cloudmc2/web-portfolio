@@ -751,7 +751,7 @@ input:checked + .slider:before {
 
 .load-wrapper {
   width: 100%;
-  height: 100vh;       /* Use 100vh to ensure it fills the full screen height */
+  height: 150vh;       /* Use 100vh to ensure it fills the full screen height */
   position: fixed;     /* Use fixed so it stays on top even if scrolling happens */
   top: 0;
   left: 0;
@@ -907,7 +907,7 @@ input:checked + .slider:before {
 @media (max-width: 600px) {
   .load-wrapper {
   width: 100%;
-  height: 100vh;       /* Use 100vh to ensure it fills the full screen height */
+  height: 150vh;       /* Use 100vh to ensure it fills the full screen height */
   position: fixed;     /* Use fixed so it stays on top even if scrolling happens */
   top: 0;
   left: 0;
@@ -1010,6 +1010,7 @@ input:checked + .slider:before {
   .skill-card {
     min-height: 350px;
     padding: 1.5rem 1rem;
+    width: 65%;
   }
 
   .skill-title {
@@ -1022,6 +1023,7 @@ input:checked + .slider:before {
 
   .project-card {
     min-height: 320px;
+    width: 65%;
   }
 
   /* Contact Section */
@@ -1075,5 +1077,16 @@ input:checked + .slider:before {
   .skills-grid,
   .projects-grid {
     gap: 1.5rem;
+  }
+
+  .project-card {
+    min-height: 320px;
+    width: 65%;
+  } 
+
+  .skill-card {
+    min-height: 350px;
+    padding: 1.5rem 1rem;
+    width: 65%;
   }
 }
