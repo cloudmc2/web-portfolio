@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: azure;
+  overflow-x: hidden;
 }
 
 /* Generic full-screen section styling */
@@ -169,7 +170,7 @@ input:checked + .slider:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 120px 40px 60px;
+  padding: 60px 40px 60px;
   align-items: center;
   justify-content: center;
   gap: 60px;
@@ -313,6 +314,7 @@ input:checked + .slider:before {
   background: -webkit-linear-gradient(#2A7B9B, #57C785);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 .About-description p {
@@ -420,7 +422,7 @@ input:checked + .slider:before {
 .project-card {
   padding: 20px;
   width: 100%;
-  min-height: 370px;
+  min-height: 420px;
   border-radius: 20px;
   background: rgba(12, 11, 11, 0.58);
   box-shadow: 5px 5px 8px #1b1b1b, -5px -5px 8px #272727;
@@ -441,12 +443,45 @@ input:checked + .slider:before {
   margin: 15px 0 0 10px;
 }
 
-.project-image-slot {
+.project-image-slot1 {
   min-height: 170px;
   background-color: #313131;
   border-radius: 15px;
   box-shadow: inset 5px 5px 3px #2f2f2f, inset -5px -5px 3px #333333;
-  background-image: url(https://assets.lightspeedhq.com/img/c105e8a8-retail_products_inventory-management_half-width-2.jpg);
+  background-image: url(/images/project1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.project-image-slot2 {
+   min-height: 170px;
+  background-color: #313131;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 3px #2f2f2f, inset -5px -5px 3px #333333;
+  background-image: url(/images/project2.1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.project-image-slot3 {
+   min-height: 170px;
+  background-color: #313131;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 3px #2f2f2f, inset -5px -5px 3px #333333;
+  background-image: url(/images/project3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.project-image-slot-4 {
+   min-height: 170px;
+  background-color: #313131;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 3px #2f2f2f, inset -5px -5px 3px #333333;
+  background-image: url(/images/project2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -458,6 +493,47 @@ input:checked + .slider:before {
   font-size: 15px;
   line-height: 1.5;
 }
+
+.language-used {
+  margin: 10px 0 0 10px;
+  color: rgb(184, 184, 184);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* From Uiverse.io by ArturCodeCraft */ 
+/* <reset-style> ============================ */
+.project-card a {
+  text-decoration: none;
+}
+/* <main-style> ============================ */
+.view-project-btn {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+}
+
+.view-project-btn::before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  transition: transform .4s, opacity .4s;
+  opacity: 0;
+}
+
+.view-project-btn:hover::before {
+  transform: translateY(-.25rem);
+  opacity: 1;
+}
+
+
+
+
 
 /* Contact Section */
 .contact-wrapper {
@@ -575,6 +651,7 @@ input:checked + .slider:before {
   font-weight: bold;
   text-transform: uppercase;
   transition: 0.3s;
+  margin-top: 10px;
 }
 
 .button-wrapper button:hover {
@@ -671,6 +748,25 @@ input:checked + .slider:before {
 
 /* Tablet - 768px and below */
 @media (max-width: 768px) {
+
+.load-wrapper {
+  width: 100%;
+  height: 100vh;       /* Use 100vh to ensure it fills the full screen height */
+  position: fixed;     /* Use fixed so it stays on top even if scrolling happens */
+  top: 0;
+  left: 0;
+  background-color: #000;
+  
+  /* --- The Missing Line --- */
+  display: flex;       
+  /* ------------------------ */
+
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;       /* Ensures it sits on top of your Navbar (which is z-index: 100) */
+}
+
   nav {
     height: 80px;
     padding: 0 30px;
@@ -809,6 +905,24 @@ input:checked + .slider:before {
 
 /* Mobile - 600px and below */
 @media (max-width: 600px) {
+  .load-wrapper {
+  width: 100%;
+  height: 100vh;       /* Use 100vh to ensure it fills the full screen height */
+  position: fixed;     /* Use fixed so it stays on top even if scrolling happens */
+  top: 0;
+  left: 0;
+  background-color: #000;
+  
+  /* --- The Missing Line --- */
+  display: flex;       
+  /* ------------------------ */
+
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;       /* Ensures it sits on top of your Navbar (which is z-index: 100) */
+}
+
   nav {
     height: 70px;
     padding: 0 20px;
