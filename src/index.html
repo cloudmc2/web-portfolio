@@ -3,7 +3,8 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
   <title>Personal Portfolio</title>
  </head> 
  <body>
@@ -109,8 +110,8 @@
             <a href="https://www.linkedin.com/in/janderick-dela-cruz-a982b0370/"><i class="fab fa-linkedin"></i>
               <img src="/images/icon2.png" alt="LinkedIn Logo" height="50px" />
             </a>
-            <a href="#"><i class="fab fa-instagram"></i>
-              <img src="/images/icon3.png" alt="Instagram Logo" height="50px" />
+            <a id = "instagram" href="#"><i class="fab fa-instagram"></i>
+              <img  src="/images/icon3.png" alt="Instagram Logo" height="50px" />
             </a>     
           </div>
         </div>
@@ -239,8 +240,7 @@
       Capable of designing and developing responsive, user-friendly websites with
       clean layouts and basic interactivity, focusing on accessibility and UI/UX.
       <br><br>
-      <strong>Tech:</strong> HTML, CSS, JavaScript, PHP
-    </p>
+      <strong>Tech:</strong> HTML, CSS, JavaScript
   </div>
 
   <div class="skill-card">
@@ -268,7 +268,7 @@
       Knowledgeable in designing and managing relational databases, writing efficient
       queries, and integrating databases with desktop and web applications.
       <br><br>
-      <strong>Tech:</strong> MySQL, SQL Server, SQLite
+      <strong>Tech:</strong> MySQL, SQL Management Studio
     </p>
   </div>
 
@@ -390,15 +390,15 @@
 </svg>
           </div>
           <div class = "phone-slot">
-            <span>+(63)9232323233</span>
+            <span>+(63)968-310-4348</span>
           </div>
         </div>
       </div>
 
       <div class="contact-form-container">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form id= "form" action="https://formsubmit.co/jndr.dev@gmail.com" method="POST">
           <!--send email key-->
-           <input type="hidden" name="access_key" value="2b42f558-d9ed-49b5-853f-156799e7d156">
+           <!-- <input type="hidden" name="access_key" value="2b42f558-d9ed-49b5-853f-156799e7d156"> -->
              
           <div class="form-row">
             <input type="text" name = "name" placeholder="Name" required>

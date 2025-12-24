@@ -8,6 +8,17 @@ $(window).on('load', function() {
   $('.load-wrapper').delay(500).fadeOut('slow');
 });
 
+
+//links error handling
+const instagram = document.getElementById('instagram');
+
+if (instagram) {
+  instagram.addEventListener('click', function (e) {
+    e.preventDefault();
+    alert("This link is not available yet");
+  });
+}
+
 // 1. Select the elements
 const sidebar = document.querySelector('.nav-list');
 const openBtn = document.querySelector('.open-button');
@@ -48,48 +59,32 @@ hiddenElements.forEach((el) => {
 
 //contact form 
 
-
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  // 🔐 CAPTCHA CHECK FIRST
-  const captchaResponse = grecaptcha.getResponse();
-
-  if (!captchaResponse) {
-    alert('Please complete the captcha.');
+form.addEventListener('submit', (e) => {
+  // 🔐 CAPTCHA CHECK FIRST - with better validation
+  
+  // Check if grecaptcha is loaded
+  if (typeof grecaptcha === 'undefined') {
+    e.preventDefault();
+    alert('reCAPTCHA is still loading. Please wait a moment and try again.');
     return;
   }
 
-  const formData = new FormData(form);
-  formData.append("access_key", "2b42f558-d9ed-49b5-853f-156799e7d156");
-  formData.append("g-recaptcha-response", captchaResponse);
+  const captchaResponse = grecaptcha.getResponse();
 
-  const originalText = submitBtn.textContent;
+  // Check if captcha is actually completed
+  if (!captchaResponse || captchaResponse.length === 0) {
+    e.preventDefault();
+    alert('Please complete the captcha before submitting.');
+    return;
+  }
+
+  // If captcha is valid, show sending state and allow form to submit naturally
   submitBtn.textContent = "Sending...";
   submitBtn.disabled = true;
-
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      alert("Success! Your message has been sent.");
-      form.reset();
-      grecaptcha.reset(); // reset captcha
-    } else {
-      alert("Error: " + data.message);
-    }
-  } catch (error) {
-    alert("Something went wrong. Please try again.");
-  } finally {
-    submitBtn.textContent = originalText;
-    submitBtn.disabled = false;
-  }
+  
+  // Form will submit to FormSubmit.co via the action attribute
 });
+
